@@ -2,7 +2,8 @@ import requests
 from telegram import *
 from telegram.ext import Updater, CommandHandler, CallbackContext, \
     MessageHandler, Filters
-
+import os
+PORT = int(os.environ.get('PORT', 5000))
 
 def get_Download_URL_From_API(url):
     API_URL = "https://getvideo.p.rapidapi.com/"
